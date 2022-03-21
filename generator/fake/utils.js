@@ -1,13 +1,14 @@
 import csv from 'k6/x/csv'
 import {
   randomItemIn,
-  randomIntBetween
+  randomIntBetween,
+  randomCSV
 } 
 from '@utils/index.js'
 
 // Append Response to CSV
 export const appendCSV = () => {
-  const append = csv.append('./data/fake-response.csv', ["test"])
+  csv.append('./data/fake-response.csv', ["test"])
   console.log(`Append CSV Success`)
 }
 
@@ -17,9 +18,15 @@ export const randomItemInList = () => {
   console.log(`Random Item in List ${randomItem}`)
 }
 
-// Random item in List
+// Random integer in range
 export const randomIntegerBetween = () => {
   const randomInteger = randomIntBetween(1, 10)
   console.log(`Random Int Between in Range ${randomInteger}`)
+}
+
+// Random read csv
+const csvData = randomCSV('Read CSV', './data/fake-data.csv')
+export const randomReadCSV = () => {
+  console.log(`Random Read CSV ${csvData}`)
 }
 

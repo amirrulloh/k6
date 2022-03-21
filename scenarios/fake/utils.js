@@ -2,6 +2,7 @@ export {
   appendCSV, 
   randomItemInList,
   randomIntegerBetween,
+  randomReadCSV,
  } 
 from "@generator/fake/utils.js";
 
@@ -15,6 +16,7 @@ const config = {
     appendCSV: { targetRate: distribute(100 * __ENV.X_TARGET) },
     randomItemInList: { targetRate: distribute(100 * __ENV.X_TARGET) },
     randomIntegerBetween: { targetRate: distribute(100 * __ENV.X_TARGET) },
+    randomReadCSV: { targetRate: distribute(100 * __ENV.X_TARGET) },
   }
 }
 
