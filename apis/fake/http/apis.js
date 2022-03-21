@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-template-curly-in-string */
 import http from 'k6/http'
 

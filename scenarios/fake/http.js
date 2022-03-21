@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 export { fetchAll } from "@generator/fake/http.js";
 
 function distribute(value) {
