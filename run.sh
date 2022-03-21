@@ -8,4 +8,4 @@ then
   scenario=ramping
 fi
 
-SCENARIO=$scenario k6 run $service --no-thresholds --logformat=raw --console-output=./errors.log 
+SCENARIO=$scenario ./k6_mac run $service --no-thresholds --logformat=raw --console-output=./errors.log 
