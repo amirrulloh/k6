@@ -1,4 +1,4 @@
-export { appendCSV } from "@generator/fake/utils.js";
+export { appendCSV, randomItemInList } from "@generator/fake/utils.js";
 
 function distribute(value) {
   return value / __ENV.SERVER_COUNT
@@ -8,6 +8,7 @@ const config = {
   scenario: __ENV.SCENARIO,
   groupServices: {
     appendCSV: { targetRate: distribute(100 * __ENV.X_TARGET) },
+    randomItemInList: { targetRate: distribute(100 * __ENV.X_TARGET) },
   }
 }
 
