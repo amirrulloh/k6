@@ -1,0 +1,29 @@
+{
+  "name": "tix-k6-perf",
+  "version": "1.0.0",
+  "description": "tiket k6 scripts",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack"
+  },
+  "keywords": [],
+  "author": "Mario Wibisono",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.0",
+    "eslint": "^7.28.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "k6": "^0.0.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.4",
+    "js-yaml": "^3.14.1"
+  }
+}
