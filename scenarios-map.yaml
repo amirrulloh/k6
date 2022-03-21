@@ -1,1 +1,2 @@
 fakeStoreApi: "./scenarios/fake/http.js"
+utils: "./scenarios/fake/utils.js"
