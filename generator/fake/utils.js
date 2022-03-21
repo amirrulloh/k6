@@ -2,7 +2,8 @@ import csv from 'k6/x/csv'
 import {
   randomItemIn,
   randomIntBetween,
-  randomCSV
+  randomCSV,
+  randomDate
 } 
 from '@utils/index.js'
 
@@ -30,3 +31,10 @@ export const randomReadCSV = () => {
   console.log(`Random Read CSV ${csvData}`)
 }
 
+// Random Date
+export const randomDateinRange = () => {
+  const startDate = new Date(2022, 2, 21) //Javascript January = 0, 2 = March
+  const endDate = new Date(2022, 2, 31)
+  const randomDateIn = randomDate(startDate, endDate)
+  console.log(`Random Date in Range ${randomDateIn}`)
+}

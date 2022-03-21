@@ -1,8 +1,10 @@
+/* eslint-disable no-undef */
 export { 
   appendCSV, 
   randomItemInList,
   randomIntegerBetween,
   randomReadCSV,
+  randomDateinRange
  } 
 from "@generator/fake/utils.js";
 
@@ -17,6 +19,7 @@ const config = {
     randomItemInList: { targetRate: distribute(100 * __ENV.X_TARGET) },
     randomIntegerBetween: { targetRate: distribute(100 * __ENV.X_TARGET) },
     randomReadCSV: { targetRate: distribute(100 * __ENV.X_TARGET) },
+    randomDateinRange: { targetRate: distribute(100 * __ENV.X_TARGET) },
   }
 }
 

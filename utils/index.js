@@ -1,5 +1,4 @@
-import { check } from 'k6'
-import Papa from 'https://jslib.k6.io/papaparse/5.1.1/index.js'
+import Papa from './papaparse'
 import { SharedArray } from 'k6/data'
 
 export const randomItemIn = (List) => {
@@ -28,17 +27,5 @@ export function randomCSV (label, filePath) {
 
 export const randomDate = (start, end) => {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())).toISOString().slice(0, 10)
-}
-
-export const assertStatus = (res, status, name) => {
-  check(res, {
-    [`${name} status is ${status}`]: (r) => {
-      // Will be printed only if verbose = true
-      if (r.status != status && verbose) {
-        console.log(JSON.stringify(res))
-      }
-      return r.status === status
-    }
-  })
 }
 
